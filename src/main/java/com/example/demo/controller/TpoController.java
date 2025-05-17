@@ -10,10 +10,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("/api/auth/tpo")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*") // for frontend connection
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")// for frontend connection
 public class TpoController {
 
     private final TpoService tpoService;

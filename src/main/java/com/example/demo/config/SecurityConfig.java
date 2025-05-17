@@ -28,7 +28,9 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
     .requestMatchers(
         "/api/auth/tpo/register",
         "/api/auth/tpo/login",
-        "/api/auth/tpo/**"
+        "/api/auth/tpo/**",
+        "/api/admin/**"
+        
     ).permitAll() // ✅ This now matches your actual controller paths
     .anyRequest().authenticated()
     .and()
